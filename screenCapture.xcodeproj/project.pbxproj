@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61938E181E564456002645EC /* preferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61938E171E564456002645EC /* preferenceView.swift */; };
 		61A976A21E52D8B700ECC648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A976A11E52D8B700ECC648 /* AppDelegate.swift */; };
 		61A976A41E52D8B700ECC648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61A976A31E52D8B700ECC648 /* Assets.xcassets */; };
 		61A976A71E52D8B700ECC648 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61A976A51E52D8B700ECC648 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61938E171E564456002645EC /* preferenceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = preferenceView.swift; sourceTree = "<group>"; };
 		61A9769E1E52D8B600ECC648 /* screenCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = screenCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A976A11E52D8B700ECC648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61A976A31E52D8B700ECC648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				61A976A31E52D8B700ECC648 /* Assets.xcassets */,
 				61A976A51E52D8B700ECC648 /* MainMenu.xib */,
 				61A976A81E52D8B700ECC648 /* Info.plist */,
+				61938E171E564456002645EC /* preferenceView.swift */,
 			);
 			path = screenCapture;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61A976A21E52D8B700ECC648 /* AppDelegate.swift in Sources */,
+				61938E181E564456002645EC /* preferenceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +286,7 @@
 				61A976AD1E52D8B700ECC648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
