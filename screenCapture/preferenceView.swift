@@ -72,32 +72,88 @@ class preferenceView: NSView {
         return btn
     }()
     
+    let filePathText: NSTextField = {
+        let tf = NSTextField(string: "")
+        tf.backgroundColor = NSColor.white
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        return tf
+    }()
+    
+    let filePathSelectionBtn: NSButton = {
+        let btn = NSButton()
+        btn.title = "Open"
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        return btn
+    }()
+    
     
     func setupViews() {
         
-        addSubview(modeOptionLabel)
-        let cn1 = NSLayoutConstraint(item: modeOptionLabel,
-                                        attribute: .width,
-                                        relatedBy: .equal,
-                                        toItem: nil,
-                                        attribute: .notAnAttribute, 
-                                        multiplier: 1, 
-                                        constant: 100)
-        let cn2 = NSLayoutConstraint(item: modeOptionLabel,
-                                        attribute: .height,
-                                        relatedBy: .equal,
-                                        toItem: nil,
-                                        attribute: .notAnAttribute,
-                                        multiplier: 1,
-                                        constant: 250)
+        let views = ["modeOptionLabel":modeOptionLabel,"windowModeBtn":windowModeBtn,"selectionModeBtn":selectionModeBtn,"saveOptionLabel":saveOptionLabel,"saveAsFile":saveAsFile,"saveToClipboard":saveToClipboard,"saveLocationLabel":saveLocationLabel,"filePathText":filePathText,"filePathSelectionBtn":filePathSelectionBtn]
         
-        modeOptionLabel.addConstraints([cn1,cn2])
+        addSubview(modeOptionLabel)
         addSubview(windowModeBtn)
-//        addSubview(selectionModeBtn)
-//        addSubview(saveOptionLabel)
-//        addSubview(saveAsFile)
-//        addSubview(saveToClipboard)
-//        addSubview(saveLocationLabel)
+        addSubview(selectionModeBtn)
+        addSubview(saveOptionLabel)
+        addSubview(saveAsFile)
+        addSubview(saveToClipboard)
+        addSubview(saveLocationLabel)
+        addSubview(filePathText)
+        addSubview(filePathSelectionBtn)
+
+
+//        let cn1 = NSLayoutConstraint(item: modeOptionLabel,
+//                                        attribute: .width,
+//                                        relatedBy: .equal,
+//                                        toItem: nil,
+//                                        attribute: .notAnAttribute, 
+//                                        multiplier: 1, 
+//                                        constant: 100)
+//        let cn2 = NSLayoutConstraint(item: modeOptionLabel,
+//                                        attribute: .height,
+//                                        relatedBy: .equal,
+//                                        toItem: nil,
+//                                        attribute: .notAnAttribute,
+//                                        multiplier: 1,
+//                                        constant: 250)
+        
+        let cn1 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-10-[modeOptionLabel(25)]", options: .alignAllTop, metrics: nil, views: views)
+        let cn2 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[modeOptionLabel]", options: .alignAllTop, metrics: nil, views: views)
+        let cn3 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-45-[windowModeBtn(25)]", options: .alignAllTop, metrics: nil, views: views)
+        let cn4 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[windowModeBtn]", options: .alignAllTop, metrics: nil, views: views)
+        let cn5 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-45-[selectionModeBtn(25)]", options: .alignAllTop, metrics: nil, views: views)
+        let cn6 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-120-[selectionModeBtn]", options: .alignAllTop, metrics: nil, views: views)
+        let cn7 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-80-[saveOptionLabel(25)]", options: .alignAllTop, metrics: nil, views: views)
+        let cn8 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[saveOptionLabel]", options: .alignAllTop, metrics: nil, views: views)
+        let cn9 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-115-[saveAsFile(25)]", options: .alignAllTop, metrics: nil, views: views)
+        let cn10 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[saveAsFile]", options: .alignAllTop, metrics: nil, views: views)
+        let cn11 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-115-[saveToClipboard(25)]", options: .alignAllTop, metrics: nil, views: views)
+        let cn12 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-120-[saveToClipboard]", options: .alignAllTop, metrics: nil, views: views)
+        let cn13 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-150-[saveLocationLabel(25)]", options: .alignAllTop, metrics: nil, views: views)
+        let cn14 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[saveLocationLabel]", options: .alignAllTop, metrics: nil, views: views)
+        let cn15 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-185-[filePathText(25)]", options: .alignAllTop, metrics: nil, views: views)
+        let cn16 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[filePathText(200)]", options: .alignAllTop, metrics: nil, views: views)
+        let cn17 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-185-[filePathSelectionBtn(25)]", options: .alignAllTop, metrics: nil, views: views)
+        let cn18 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-230-[filePathSelectionBtn]", options: .alignAllTop, metrics: nil, views: views)
+        
+        addConstraints(cn1)
+        addConstraints(cn2)
+        addConstraints(cn3)
+        addConstraints(cn4)
+        addConstraints(cn5)
+        addConstraints(cn6)
+        addConstraints(cn7)
+        addConstraints(cn8)
+        addConstraints(cn9)
+        addConstraints(cn10)
+        addConstraints(cn11)
+        addConstraints(cn12)
+        addConstraints(cn13)
+        addConstraints(cn14)
+        addConstraints(cn15)
+        addConstraints(cn16)
+        addConstraints(cn17)
+        addConstraints(cn18)
         
     }
     

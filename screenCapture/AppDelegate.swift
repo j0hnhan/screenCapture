@@ -95,6 +95,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         view.wantsLayer = true
         view.layer?.backgroundColor = NSColor.white.cgColor
         newWindow.contentView?.addSubview(view)
+        
+        
     }
     
     func openPreference() {
